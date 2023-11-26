@@ -1,0 +1,326 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    background-color: black;
+    color:white;
+    padding-top: 10px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 10px;
+}
+header img{
+    width:7%;
+}
+header ul{
+    display:flex;
+    justify-content: center;
+}
+header ul li{
+    display:inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+}
+header ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+}
+header ul li:hover a{
+    color:gray;
+}
+nav{
+    position: relative;
+    z-index: 999;
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 10px;
+}
+nav button{
+    border: 0;
+    background-color: white;
+    font-size: 18px;
+}
+nav .danhmuc:hover{
+    color:blue;
+}
+nav span{
+    font-size: 30px;
+}
+nav span a{
+    color:black;
+    margin-left:20px;
+}
+nav span a:hover{
+    color:blue;
+}
+.offcanvas-body li{
+    display:inline-block;
+    border-bottom: 1px solid;
+    width:100%;
+    margin:0px;
+}
+.offcanvas-body li:hover a{
+    box-shadow: 0px 0px 5px rgb(241, 235, 235);
+    background-color: rgb(241, 235, 235);
+    color:blueviolet;
+}
+.offcanvas-body li a{
+    display:inline-block;
+    text-decoration: none;
+    color:black;
+    line-height:50px;
+    width:100%;
+}
+#key{
+    border:rgb(211, 231, 231) solid;
+    line-height: 40px;
+    background-color: rgb(211, 231, 231);
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: 0;
+    width:600px;
+   
+}
+nav form{
+    position:relative;
+}
+#search{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    background-color: rgb(211, 231, 231);
+    font-size: 20px;
+}
+.slidesp{
+    width:50%;
+    display:flex;
+    height:650px;
+}
+.slideshow{
+    width:80%;
+}
+.slideshow .carousel-item img{
+    width:100%;
+    height:650px;
+}
+.chitiet{
+    width:20%;
+    display:grid;
+    grid-gap: 10px;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.chitiet img{
+    width:100%;
+    height:150px;
+    box-shadow: 0 0 5px gray;
+}
+.chitiet button{
+    border:none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 2s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  .sticky {
+    position:fixed;
+    top:0;
+    width:100%;    
+}
+footer{
+  background-color: black;
+  height:400px;
+  margin-top: 10px;
+}
+.contai{
+    display:flex;
+    width:100%;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.title--item {
+    color: black;
+    font-size: 20px;
+    padding-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+ .filter__form-item input {
+    display: none;
+  }
+ .filter__form-item{
+    float:left;
+    padding-right:10px;
+  }
+ .filter__form-item label {
+    display: block;
+    width:40px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: white;
+    color: black;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    border:1px solid black;
+  }
+  .filter__form-item label.active {
+    background: black;
+    color: #fff;
+    border:1px solid black;
+  }
+  .filter__form-item label:hover {
+    background: black;
+    color: #fff;
+    border:1px solid black;
+  }
+  #sl{
+    height: 50px;
+    width:80px;
+    text-align: center;
+    padding-left: 15px;
+    font-size: 24px;
+    margin:0px;
+}
+.tgsl .ct{
+    height: 50px;
+    width:50px;
+    font-size: 30px;
+    border-radius: 5px;
+    color:black;
+    margin:0px;
+    border-radius: 0 10px 0 10px ;
+    border:1px solid black;
+}
+.tgsl{
+    font-size: 20px;
+    display:flex;
+    padding-right: 40px;
+    margin-top: 20px;
+}
+.add,.buy{
+        margin-top: 30px;
+        margin-right: 15px;
+        height: 50px;
+        text-align: center;
+        border:1px solid black;
+        border-radius: 0 10px 0 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 20px;
+}
+.add{
+    background: black;
+    color: white;
+}
+.add:hover{
+    border:1px solid black;
+    color:black;
+    background: white;
+}
+.buy:hover{
+    border:1px solid black;
+    color:white;
+    background: black;
+}
+.chitietsp{
+    margin-left: 120px;
+}
+.chitietsp form{
+    margin-bottom: 50px;
+}
+.title{
+    width:100%;
+    padding-left: 150px;
+    line-height: 60px;
+}
+.check{
+    height:70px;
+}
+.Do{
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    border:1px solid red;
+    background:red;
+    color:white;
+}
+.Xanh{
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    border:1px solid blue;
+    background:blue;
+    color:white;
+}
+.Tim{
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    border:1px solid purple;
+    background:purple;
+    color:white;
+}
+.Vang{
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    border:1px solid yellow;
+    background:yellow;
+    color:white;
+}
+.Den{
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    border:1px solid black;
+    background:black;
+    color:white;
+}
+.Xam{
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    border:1px solid gray;
+    background:gray;
+    color:white;
+}
+.giohang{
+    width:70%;
+}

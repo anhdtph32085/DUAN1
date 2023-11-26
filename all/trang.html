@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-1">
+        
+        <div class="rwo">
+            <label class="ds__item">
+                <input class="ds__item__input" type="radio" name="guest" checked=""><span class="ds__item__labell">Địa chỉ</span>
+                <div class="ds__item__contact-info">
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <input class="form-control" type="text" value="" name="customer_display_name" placeholder="Họ tên">
+                        </div>
+                        <div class="col-6 form-group">
+                            <input class="form-control " type="text" name="customer_phone" value="" placeholder="Số điện thoại">
+                        </div>
+                        
+                        
+                        <div class="col-12 form-group">
+                            <input class="form-control-1" type="text" placeholder="Địa chỉ" name="customer_address2" value="">
+                        </div>
+                        <!--<div class="col-12 form-group">
+                            <button type="submit" class="btn btn--large">Lưu thông tin</button>
+                        </div>-->
+                    </div>
+                </div>
+            </label>
+
+
+
+            <div class="col-lg-4 cart-page__col-summary">
+                <div class="cart-summary" id="cart-page-summary">
+                    <div class="cart-summary__overview">
+                        <h3>Tổng tiền giỏ hàng</h3>
+                        <div class="cart-summary__overview__item">
+                            <p>Tổng iền hàng</p>
+                            <p class="total-product" id="total-product">140,000đ</p>
+                        </div>
+                        <div class="cart-summary__overview__item">
+                            <p>Tạm tính</p>
+                            <p class="total-not-discount" id="total-not-discount">140,000đ</p>
+                        </div>
+                        <div class="cart-summary__overview__item">
+                            <p>Phí vận chuyển</p>
+                            <p class="total-not-discount" id="total-not-discount">10,000đ</p>
+                        </div>
+                        <div class="cart-summary__overview__item">
+                            <p>Tiền thanh toán</p>
+                            <p><b class="order-price-total" id="order-price-total">150,000đ</b></p>
+                            <input type="hidden" name="" id="Voucher" value="150000">
+                        </div>
+                    </div>
+                </div>
+                <div class="row add_top_30 flex-sm-row-reverse cart_actions">
+                    <div class="col-sm-4 text-end">
+                        <h3>Mã giảm giá</h3>
+                    </div>
+                        <div class="col-sm-8">
+                        <div class="apply-coupon">
+                            <div class="form-group">
+                                <div class="g-2">
+                                    <div class="col-md-6"><input type="text" id="myVoucher" name="coupon-code" value="" placeholder="Mã giảm giá" class="form-control"></div>
+                                    <div class="col-md-4"><button type="button" onclick="getVoucher()" class="btn_1 outline">Áp dụng</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-summary__button" >
+                    <a href="#" class="btn btn--large" id="purchase-step-1" onclick="openModal()">Đặt hàng</a>
+                </div>
+                <div class="cart-summary__vouchers">
+                    <!--            -->
+                </div>
+            </div>
+        </div>
+        <div class="checkout-payment">
+            <h3 class="checkout-title">Phương thức thanh toán</h3>
+            <div class="block-border">
+                                        <p>Mọi giao dịch đều được bảo mật và mã hóa. Thông tin thẻ tín dụng sẽ không bao giờ được lưu lại.</p>
+                                        <div class="checkout-payment__options">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <label class="ds__item">
+                                        <input class="ds__item__input" type="radio" name="payment_method" id="payment_method_1" value="1">
+                                        <span class="ds__item__label">
+                                            Thanh toán bằng thẻ tín dụng
+                                                                                            </span>
+                                                                                            <span style="margin-left: 3px">
+                                                <img src="https://pubcdn.ivymoda.com/ivy2/images/1.png" class="">
+                                            </span>
+                                                                                    </label>
+                                                                                                                <!--                                        <div class="my-2">-->
+<!--                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/1.png" class="">-->
+<!--                                            -->
+<!--                                        </div>-->
+                                                                                                                                                                                                                                                                                                            <label class="ds__item">
+                                        <input class="ds__item__input" type="radio" name="payment_method" id="payment_method_2" value="2">
+                                        <span class="ds__item__label">
+                                            Thanh toán bằng thẻ ATM
+                                                                                                    <span>Hỗ trợ thanh toán online hơn 38 ngân hàng phổ biến Việt Nam.</span>
+                                                                                            </span>
+                                                                                    </label>
+                                                                                                                <!--                                        <div class="my-2">-->
+<!--                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/2.png" class="">-->
+<!--                                            -->
+<!--                                            <span style="font-size: 14px;">Hỗ trợ thanh toán online hơn 38 ngân hàng phổ biến Việt Nam.</span>-->
+<!--                                            -->
+<!--                                        </div>-->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <label class="ds__item">
+                                        <input class="ds__item__input" type="radio" name="payment_method" id="payment_method_5" value="5">
+                                        <span class="ds__item__label">
+                                            Thanh toán bằng Momo
+                                                                                            </span>
+                                                                                    </label>
+                                                                                                                <!--                                        <div class="my-2">-->
+<!--                                            <img src="https://pubcdn.ivymoda.com/ivy2/images/5.png" class="">-->
+<!--                                            -->
+<!--                                        </div>-->
+                                                                                                                                                                                                                                                                                                                                                                                <label class="ds__item">
+                                        <input class="ds__item__input" type="radio" name="payment_method" id="payment_method_3" value="3" checked="">
+                                        <span class="ds__item__label">
+                                            Thanh toán khi giao hàng
+                                                                                            </span>
+                                                                                    </label>
+                                                                                                                                                                                                                                                                                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" class="vouCher" name="" id="" value="NINE10">
+    <input type="hidden" class="vlvouCher" name="" id="" value="10000"><br>
+    <input type="hidden" class="vouCher" name="" id="" value="NINE15">
+    <input type="hidden" class="vlvouCher" name="" id="" value="15000"><br>
+    <!-- <div class="modalThank" id="modalThank">
+        <div class="thank">
+            <div class="modalClose" onclick="closeModal()">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <div class="boxIcons">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div class="boxthank">
+                <h1 class="style">thank bro mua hàng</h1>
+            </div>
+        </div> -->
+    </div>
+    <script>
+        function closeModal(){
+            var modal = document.getElementById('modalThank');
+            modal.style.display= 'none';
+        }
+        function openModal(){
+            var modall = document.getElementById('modalThank');
+            modall.style.display="block";
+        }
+        var modall = document.getElementById('modalThank');
+        modall.style.display="none";
+
+        var namevc = document.getElementsByClassName('vouCher');
+        var vlvoucher = document.getElementsByClassName('vlvouCher');
+        function getVoucher() {           
+        let myInput = document.getElementById("myVoucher");
+        let myVoucher = myInput.value.toUpperCase();   
+        let check = 0;   
+        for(let i = 0;i<namevc.length;i++){
+            if(namevc[i].value==myVoucher){
+            var gt = i;
+            check = 1;
+            }
+        }if(check==1){
+            var thanhtien = document.getElementById('Voucher').value - vlvoucher[gt].value
+            document.getElementById('order-price-total').innerHTML= thanhtien.toLocaleString("en-US") +"đ"; 
+        }              
+}    
+    </script>
+</body>
+</html>

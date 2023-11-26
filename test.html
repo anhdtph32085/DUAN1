@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>   
+<h3>Hãy điền tên vào ô nhập bên dưới</h3>    
+<input id="myVoucher" type="text"></input>    
+<button type="button" onclick="getVoucher()">Hiển thị tên</button>  <script>        
+function getVoucher() {           
+let myInput = document.getElementById("myVoucher");
+let myName = myInput.value;            
+alert("Tên của bạn là " + myName); // hiển thị tên của người dùng        
+}    
+</script>
+</body>
+</html>

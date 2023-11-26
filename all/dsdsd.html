@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <main class="bg_gray">
+            <div class="container margin_30">
+            <div class="page_header">
+                    <h1>Cart page</h1>
+            </div>
+            <!-- /page_header -->
+            <div class="row100">
+                <table class="table table-striped cart-list">
+                <thead>
+                    <tr>
+                        <th>
+                            Product
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Subtotal
+                        </th>
+                        <th>
+                            
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="rim">
+                        <td>
+                            <div class="thumb_cart">
+                                <img src="/style/buy-1.jpg" data-src="style/buy-1.jpg" class="lazy loaded" alt="Image" data-was-processed="true">
+                            </div>
+                            <div class="girdcart">
+                                <span class="item_cart">Armor Okwahn II</span>
+                                <span class="item_cart">Màu sắc : Trắng</span>
+                                <span class="item_cart">Size : L</span>
+                            </div>
+                        </td>
+                        <td class="hiv">
+                            <strong>$140.00</strong>
+                            <br>
+                            <strong class="ruttt">-50%</strong>
+                        </td>
+                        <td>
+                            <div class="numbers-row">
+                                <input type="text" value="1" id="quantity_1" class="qty2" name="quantity_1">
+                                <div class="inc button_inc" onclick="increaseQuantity('quantity_1', 'price_1')">+</div>
+                                <div class="dec button_inc" onclick="decreaseQuantity('quantity_1', 'price_1')">-</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cartPrice" id="price_1">$140.00</div>
+                        </td>
+                        <td class="options">
+                           <a href="" onclick="removeItem('this')"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    <tr class="rim">
+                        <td>
+                            <div class="thumb_cart">
+                                <img src="/style/buy-1.jpg" data-src="style/buy-1.jpg" class="lazy loaded" alt="Image" data-was-processed="true">
+                            </div>
+                            <div class="girdcart">
+                                <span class="item_cart">Armor Okwahn II</span>
+                                <span class="item_cart">Màu sắc : Trắng</span>
+                                <span class="item_cart">Size : L</span>
+                            </div>
+                        </td>
+                        <td class="hiv">
+                            <strong>$140.00</strong>
+                            <br>
+                            <strong class="ruttt">-50%</strong>
+                        </td>
+                        <td>
+                            <div class="numbers-row">
+                                <input type="text" value="1" id="quantity_0" class="qty2" name="quantity_0">
+                                <div class="inc button_inc" onclick="increaseQuantity('quantity_0', 'price_0')">+</div>
+                                <div class="dec button_inc" onclick="decreaseQuantity('quantity_0', 'price_0')">-</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cartPrice" id="price_0">$140.00</div>
+                        </td>
+                        <td class="options">
+                           <a href="" onclick="removeItem('this')"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <div class="col-lg-4 cart-page__col-summary">
+                <div class="cart-summary" id="cart-page-summary">
+                    <div class="cart-summary__overview">
+                        <h3>Tổng tiền giỏ hàng</h3>
+                        <div class="cart-summary__overview__item">
+                            <p>Tổng sản phẩm</p>
+                            <p class="total-product" id="total-product">1</p>
+                        </div>
+                        <div class="cart-summary__overview__item">
+                            <p>Tổng tiền hàng</p>
+                            <p class="total-not-discount" id="total-not-discount">140.00đ</p>
+                        </div>
+                        <div class="cart-summary__overview__item">
+                            <p>Thành tiền</p>
+                            <p><b class="order-price-total" id="order-price-total">0đ</b></p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="cart-summary__button">
+                    <a href="trang.html" class="btn btn--large" id="purchase-step-1">Đặt hàng</a>
+                </div>
+                <div class="cart-summary__vouchers">
+                    <!--            -->
+                </div>
+            </div>
+                        </div>
+            </div>
+
+        </main>
+    </div>
+    <script>
+        function updateTotal() {
+            var quantity = parseInt(document.getElementById('quantity_1').value);
+    var unitPrice = 140.00; // Replace with your actual unit price
+    // discuont = 0.5;
+    var totalBeforeDiscount = quantity * unitPrice;
+            //var totalAll50% = totalBeforeDiscount * (1-discuont);
+    document.getElementById('total-not-discount').textContent = totalBeforeDiscount.toFixed(2) + "đ";
+    document.getElementById('order-price-total').textContent = totalBeforeDiscount.toFixed(2) + "đ"; // Display the original total without any discount
+    document.getElementById('total-product').textContent = quantity;
+        }
+
+        function increaseQuantity(inputId, priceId) {
+            var input = document.getElementById(inputId);
+            input.value = parseInt(input.value) + 1;
+            updateTotal();
+        }
+
+        function decreaseQuantity(inputId, priceId) {
+            var input = document.getElementById(inputId);
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+                updateTotal();
+            }
+        }
+
+        function removeItem(elementId) {
+            var rowToRemove = document.getElementById(elementId);
+            if (rowToRemove) {
+                rowToRemove.parentNode.removeChild(rowToRemove);
+                updateTotal();
+            } else {
+                console.error("Element with ID " + elementId + " not found.");
+            }
+        }
+    </script>
+</body>
+</html>
