@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="form.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contact">
+        <i class="fa-solid fa-filter" id="opens-filter"></i>
+    <div class="filter active">
+        <div class="contacts">
+            <div class="filter_type version_2">
+                <h4><a href="#filter_1" data-bs-toggle="collapse" class="collapsed closed" aria-expanded="false">Categories</a></h4>
+                <div class="collapse" id="filter_1" >
+                    <ul>
+                        <li>
+                            <label class="container_check">Men 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="container_check">Women 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="container_check">Running 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="container_check">Training <small>11</small>
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /filter_type -->
+            </div>
+            <div class="filter_type version_2">
+                <h4><a href="#filter_2" data-bs-toggle="collapse" class="collapsed closed" aria-expanded="false">Color</a></h4>
+                <div class="collapse" id="filter_2" >
+                    <ul>
+                        <li>
+                            <label class="container_check">Blue 
+                                
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="container_check">Red 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="container_check">Orange 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="container_check">Black 
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter_type version_2">
+                <h4><a href="#filter_4" data-bs-toggle="collapse" class="closed">Price</a></h4>
+                <div class="collapse" id="filter_4">
+                    <ul>
+                        <li>
+                            <label class="container_check">$0 — $50
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="container_check">$50 — $100
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="container_check">$100 — $150
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="container_check">$150 — $200
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="#0" class="btn_1_1">Filter</a> <a href="#0" class="btn_1 gray">Reset</a>
+            </div>
+            <div class="cart-icons">
+                <i class="fa-solid fa-x" id="close-cart"></i>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+
+    let closeIcons = document.querySelector('#close-cart');
+    let filter = document.querySelector('.filter');
+    let open = document.querySelector('#opens-filter');
+
+    open.onclick= () => {
+        filter.classList.add('active');
+    }
+    filter.classList.remove('active');
+    closeIcons.onclick= () =>{
+        filter.classList.remove('active');
+    };
+</script>
+</body>
+</html>
